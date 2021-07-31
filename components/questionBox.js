@@ -8,7 +8,12 @@ app.component("question-box", {
   template:
     /*html*/
     `<div class="question-box">
-    <p>{{ questions[questionin].question }}</p>
+    <p class="question-box__question">{{ questions[questionin].question }}</p>
+    
+    <div class="question-box__option" v-for="option in questions[questionin].options">
+    <input name="{{option}}" type="radio"> {{option}}
+    <br>
+    </div>
     
     </div>`,
 
@@ -21,7 +26,7 @@ app.component("question-box", {
         },
         {
           question: "What",
-          options: ["Fire", "Water", "Wind", "Air"],
+          options: ["A", "B", "C", "D"],
         },
         {
           question: "Poly morphism",
