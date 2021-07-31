@@ -66,7 +66,7 @@ app.component("question-box", {
         id: this.questionin,
         answer: this.selectedoption,
       };
-      this.$emit("submit", payload);
+      this.$emit("submit-answers", payload);
     },
   },
 });

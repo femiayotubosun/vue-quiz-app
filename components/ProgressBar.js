@@ -13,7 +13,9 @@ app.component("progress-bar", {
   </div>`,
   computed: {
     calcProgressWidth() {
-      return (this.questionin + 1 / this.totalquestions) * 500 + "px";
+      wid = ((this.questionin + 1) / this.totalquestions) * 500 + "px";
+      console.log(this.questionin + 1);
+      return wid;
     },
   },
 });

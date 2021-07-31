@@ -23,14 +23,23 @@
         v-if="!submitted"
         @prev-question="prevQuestion"
         @next-question="nextQuestion"
-        @submit-question="submitAnswerss"
+        @submit-answers="submitAnswers"
       >
       </question-box>
+      <final-score
+        v-if="submitted"
+        :finalscore="finalscore"
+        :totalquestions="questions.length"
+        @retake="retakeExam"
+      >
+      </final-score>
     </div>
+
     <script src="./index.js"></script>
 
     <script src="./components/ProgressBar.js"></script>
     <script src="./components/questionBox.js"></script>
+    <script src="./components/finalScore.js"></script>
 
     <script>
       const mountedApp = app.mount("#app");
