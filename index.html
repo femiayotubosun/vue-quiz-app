@@ -12,11 +12,12 @@
     <div id="app">
       <div class="nav-bar">Ask Me</div>
       <progress-bar :questionin="questionin"></progress-bar>
-      <div class="question-box" :questionin="questionin"></div>
+      <question-box :questionin="questionin"></question-box>
     </div>
     <script src="./index.js"></script>
 
     <script src="./components/ProgressBar.js"></script>
+    <script src="./components/questionBox.js"></script>
 
     <script>
       const mountedApp = app.mount("#app");

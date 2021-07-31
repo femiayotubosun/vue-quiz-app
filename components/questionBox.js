@@ -9,9 +9,6 @@ app.component("question-box", {
     /*html*/
     `<div class="question-box">
     <p>{{ questions[questionin].question }}</p>
-
-    
-    
     
     </div>`,
 

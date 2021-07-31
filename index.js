@@ -1,9 +1,8 @@
 const app = Vue.createApp({
   data() {
     return {
-      questionin: 1,
+      questionin: 0,
       //   Data for question box
-      
     };
   },
   methods: {},
@@ -11,3 +10,5 @@ const app = Vue.createApp({
 
 // I'll need current progress
 // bound to progress and
+
+// I want to set total questions dynamically
