@@ -14,12 +14,16 @@
       <progress-bar
         :questionin="questionin"
         :totalquestions="questions.length"
+        v-if="!submitted"
       ></progress-bar>
       <question-box
         :questionin="questionin"
         :questions="questions"
+        :candidateanswers="candidateanswers"
+        v-if="!submitted"
         @prev-question="prevQuestion"
         @next-question="nextQuestion"
+        @submit-question="submitAnswerss"
       >
       </question-box>
     </div>

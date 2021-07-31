@@ -8,12 +8,16 @@ app.component("question-box", {
       type: Array,
       required: true,
     },
+    candidateanswers: {
+      type: Object,
+      required: true,
+    },
   },
   template:
     /*html*/
     `
 
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="">
     <div class="question-box">
     <p class="question-box__question">{{ questions[questionin].question }}</p>
 
@@ -40,14 +44,29 @@ app.component("question-box", {
   },
   methods: {
     prevQuest() {
-      this.$emit("prev-question");
+      payload = {
+        id: this.questionin,
+        answer: this.selectedoption,
+      };
+
+      this.$emit("prev-question", payload);
+      this.selectedoption = "";
     },
     nextQuest() {
-      this.$emit("next-question");
+      payload = {
+        id: this.questionin,
+        answer: this.selectedoption,
+      };
+      this.$emit("next-question", payload);
+      this.selectedoption = "";
     },
 
-    onSubmit() {
-      console.log("Yeah");
+    submitQuest() {
+      payload = {
+        id: this.questionin,
+        answer: this.selectedoption,
+      };
+      this.$emit("submit", payload);
     },
   },
 });

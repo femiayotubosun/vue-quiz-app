@@ -13,7 +13,7 @@ app.component("progress-bar", {
   </div>`,
   computed: {
     calcProgressWidth() {
-      return ((this.questionin + 1) / this.totalquestions) * 500 + "px";
+      return (this.questionin + 1 / this.totalquestions) * 500 + "px";
     },
   },
 });
