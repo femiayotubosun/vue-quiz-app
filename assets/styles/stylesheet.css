@@ -18,7 +18,7 @@
   background-color: #0369cd;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
@@ -35,7 +35,7 @@
 }
 
 .progress-bar {
-  height: 3px;
+  height: 2px;
   width: 500px;
   background-color: rgba(157, 157, 157, 0.6);
   border-radius: 2px;
@@ -49,10 +49,10 @@
 }
 .question-box {
   width: 500px;
-  height: 300px;
+  height: 250px;
   border-radius: 10px;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 25px;
   padding-left: 30px;
   padding-right: 30px;
   -webkit-box-shadow: 0px 2px 15px -12px rgba(123, 150, 212, 0.57);
@@ -61,7 +61,61 @@
 }
 
 .question-box__question {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 17px;
   font-weight: 600;
+}
+
+.question-box__option {
+  margin-bottom: 10px;
+  align-items: left;
+  font-size: 17px;
+}
+
+.question-box__option label {
+  margin-left: 20px;
+}
+
+.selected-option {
+  color: #0369cd;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0369cd;
+  outline: none;
+  border: none;
+}
+
+.button:hover {
+  background-color: #55a4f1;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+}
+.back {
+  position: absolute;
+  left: 0;
+}
+
+.submit {
+  position: absolute;
+  right: 0;
+  background-color: #000;
+}
+
+.submit:hover {
+  background-color: #9d9d9d;
+}
+.ctrl-btns {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }

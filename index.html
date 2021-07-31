@@ -11,8 +11,17 @@
   <body>
     <div id="app">
       <div class="nav-bar">Ask Me</div>
-      <progress-bar :questionin="questionin"></progress-bar>
-      <question-box :questionin="questionin"></question-box>
+      <progress-bar
+        :questionin="questionin"
+        :totalquestions="questions.length"
+      ></progress-bar>
+      <question-box
+        :questionin="questionin"
+        :questions="questions"
+        @prev-question="prevQuestion"
+        @next-question="nextQuestion"
+      >
+      </question-box>
     </div>
     <script src="./index.js"></script>
 
